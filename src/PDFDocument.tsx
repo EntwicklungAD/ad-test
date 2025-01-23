@@ -8,9 +8,7 @@ const PDFDocument = () => {
 
     return (
         <Worker workerUrl={`https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js`}>
-            <div
-                className={"w-full h-full"}
-            >
+            <div>
                 <Viewer
                     fileUrl="/test_label.pdf"
                     plugins={[defaultLayoutPluginInstance]}

@@ -1,11 +1,10 @@
-import PrintButton from "./components/PrintButton.tsx";
-import "./index.css"
 import './App.css'
+import PrintButton from "./PrintButton.tsx";
 
 function App() {
 
   return (
-    <div className={""}>
+    <div >
       <PrintButton/>
     </div>
   )
