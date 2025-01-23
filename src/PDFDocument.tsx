@@ -1,8 +1,9 @@
-import { Viewer, Worker } from '@react-pdf-viewer/core';
-import { defaultLayoutPlugin } from '@react-pdf-viewer/default-layout';
+import {SpecialZoomLevel, Viewer, Worker} from '@react-pdf-viewer/core';
+import {defaultLayoutPlugin} from '@react-pdf-viewer/default-layout';
 import '@react-pdf-viewer/core/lib/styles/index.css';
 import '@react-pdf-viewer/default-layout/lib/styles/index.css';
-import React, { useState, useRef } from 'react';
+import React, {useRef, useState} from 'react';
+import "./index.css"
 
 const PDFDocument = () => {
     const defaultLayoutPluginInstance = defaultLayoutPlugin();
@@ -30,10 +31,12 @@ const PDFDocument = () => {
             />
             {pdfFile ? (
                 <Worker workerUrl={`https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js`}>
-                    <div style={{ height: '750px' }}>
+                    <div style={{ height: '750px' }} className={"pdf-container"}>
                         <Viewer
+                            defaultScale={SpecialZoomLevel.PageFit}
                             fileUrl={pdfFile}
                             plugins={[defaultLayoutPluginInstance]}
+
                         />
                     </div>
                 </Worker>
