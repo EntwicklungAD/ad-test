@@ -1,13 +1,16 @@
 {
   "name": "entwicklungad-github-io",
   "private": true,
+  "homepage": "https://entwicklungad.github.io/entwicklungad.github.io/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@react-pdf-viewer/core": "^3.12.0",
