@@ -1,3 +1,6 @@
+WICHTIG
+Repo nur auf public stellen, wenn die beiden Brwoser Print js Dateien aus dem public Ordner entfernt wurden
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
