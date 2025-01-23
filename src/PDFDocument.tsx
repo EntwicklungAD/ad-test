@@ -31,7 +31,7 @@ const PDFDocument = () => {
             />
             {pdfFile ? (
                 <Worker workerUrl={`https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js`}>
-                    <div style={{ height: '750px' }} className={"pdf-container"}>
+                    <div style={{ height: '750px' }} className={""}>
                         <Viewer
                             defaultScale={SpecialZoomLevel.PageFit}
                             fileUrl={pdfFile}
