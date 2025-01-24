@@ -7,10 +7,14 @@ const PrintComponent: React.FC = () => {
 
     useEffect(() => {
         setup();
+        console.log(window.BrowserPrint.getLocalDevices((device) => {
+            console.log("devices " + device)
+        }, () => {}, "printer"))
     }, []);
 
     const setup = () => {
         window.BrowserPrint.getDefaultDevice("printer", (device: Device) => {
+            console.log("Das Device " + device)
             setSelectedDevice(device);
             setDevices([device]);
 
