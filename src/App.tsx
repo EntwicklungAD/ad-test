@@ -1,13 +1,11 @@
 import './App.css'
-import PrintButton from "./PrintButton.tsx";
-import PrintButtonZebra from "./PrintButtonZebra.tsx";
+import PrintComponent from "./PrintComponent.tsx";
 
 function App() {
 
   return (
     <div >
-      <PrintButton/>
-        <PrintButtonZebra/>
+     <PrintComponent/>
     </div>
   )
 }
