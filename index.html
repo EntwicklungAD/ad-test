@@ -1,6 +1,8 @@
+<!doctype html>
 <html lang="en">
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <title>Zebra Browser Print Test Page</title>
   <script type="text/javascript" src="/BrowserPrint-3.1.250.min.js"></script>
   <script type="text/javascript">
     var selected_device;
@@ -10,7 +12,6 @@
       //Get the default device from the application as a first step. Discovery takes longer to complete.
       BrowserPrint.getDefaultDevice("printer", function(device)
       {
-
         //Add device to list of devices and to html select element
         selected_device = device;
         devices.push(device);
@@ -34,7 +35,6 @@
               html_select.add(option);
             }
           }
-
         }, function(){alert("Error getting local devices")},"printer");
 
       }, function(error){
@@ -61,22 +61,18 @@
       {
         alert(readData);
       }
-
     }
     var errorCallback = function(errorMessage){
       alert("Error: " + errorMessage);
     }
     function readFromSelectedPrinter()
     {
-
       selected_device.read(readCallback, errorCallback);
-
     }
     function getDeviceCallback(deviceList)
     {
       alert("Devices: \n" + JSON.stringify(deviceList, null, 4))
     }
-
     function sendImage(imageUrl)
     {
       url = window.location.href.substring(0, window.location.href.lastIndexOf("/"));
@@ -102,7 +98,6 @@
   </script>
 </head>
 <body>
-
 <span style="padding-right:50px; font-size:200%">Zebra Browser Print Test Page</span><br/>
 <span style="font-size:75%">This page must be loaded from a web server to function properly.</span><br><br>
 Selected Device: <select id="selected_device" onchange=onDeviceSelected(this);></select> <!--  <input type="button" value="Change" onclick="changeDevice();">--> <br/><br/>
