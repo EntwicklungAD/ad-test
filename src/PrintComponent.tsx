@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Device = BrowserPrint.Device;
 
 const PrintComponent: React.FC = () => {
     const [selectedDevice, setSelectedDevice] = useState<any>(null);
@@ -9,7 +10,7 @@ const PrintComponent: React.FC = () => {
     }, []);
 
     const setup = () => {
-        (window as any).BrowserPrint.getDefaultDevice("printer", (device: any) => {
+        window.BrowserPrint.getDefaultDevice("printer", (device: Device) => {
             setSelectedDevice(device);
             setDevices([device]);
 
