@@ -40,7 +40,7 @@ const PrintComponent: React.FC = () => {
     const getConfig = () => {
         (window as any).BrowserPrint.getApplicationConfiguration((config: any) => {
             alert(JSON.stringify(config));
-        }, (error: any) => {
+        }, () => {
             alert(JSON.stringify(new (window as any).BrowserPrint.ApplicationConfiguration()));
         });
     };
